@@ -8,6 +8,7 @@
 もしcsvの形が変わる場合は、
 - separate.sh
 - countDir.sh
+
 の条件をうまく書き換えればこれらのスクリプトを流用できるはず。
 
 bashスクリプトを実行する際は、そのスクリプトが何をしているか理解してから実行すること。悪意のあるスクリプトとかだとパスワード抜かれたりするから注意。
@@ -34,6 +35,7 @@ sudo chmod +x countDir.sh
 
 ファイルの構造
 
+```
 作業ディレクトリ
 |--split.sh
 |--separate.sh
@@ -43,7 +45,7 @@ sudo chmod +x countDir.sh
 |--split.sh
 |--unite.sh
 |--解析したい.csv
-
+```
 
 ## 工程理解
 1. 巨大なcsvをそのまま解析すると時間がかかるため並列実行したい。ファイルを分割する(split.sh)。
@@ -104,4 +106,4 @@ answerファイル以下のcsvファイルを結合してOUTPUT.csvを作る。
 
 - splitfiles
 - tmp
-- answer# csvkaiseki
+- answer
